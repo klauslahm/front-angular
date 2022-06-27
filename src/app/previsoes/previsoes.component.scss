@@ -1,0 +1,89 @@
+.section {
+  padding-left: 0;
+  padding-top: 50;
+}
+
+.content {
+  display: flex;
+  text-align: center;
+}
+
+.inf_current {
+  padding-top: 0%;
+}
+
+.formulario {
+  padding-top: 0%;
+  padding-left: 15%;
+}
+
+.span_text {
+  padding-left: 10px;
+}
+
+.span_titulo {
+  padding-left: 10px;
+  font-size: 30px;
+}
+
+.rTable {
+  width: 100%;
+  text-align: center;
+  border: 0px solid black;
+}
+.rTable thead {
+  background: black;
+  font-weight: bold;
+  color: #fff;
+}
+.rTable tbody tr:nth-child(2n) {
+  background: #ccc;
+}
+.rTable th,
+.rTable td {
+  padding: 7px 0;
+  padding-top: 40px;
+}
+
+.tdPar {
+  background-color: rgba(25, 22, 22, 0.155);
+}
+
+.tdImpar {
+  background-color: rgba(25, 22, 22, 0.244);
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    width: 94%;
+  }
+
+  .rTable thead {
+    display: none;
+  }
+  .rTable tbody td {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .content {
+    width: 100%;
+  }
+  .rTable tbody tr td:nth-child(1) {
+    width: 20%;
+  }
+  .rTable tbody tr td:nth-child(2) {
+    width: 20%;
+  }
+  .rTable tbody tr td:nth-child(3) {
+    width: 20%;
+  }
+  .rTable tbody tr td:nth-child(4) {
+    width: 20%;
+  }
+  .rTable tbody tr td:nth-child(5) {
+    width: 20%;
+  }
+}

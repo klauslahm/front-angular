@@ -1,0 +1,113 @@
+<!--Previsao de hoje-->
+<div class="inf_current" *ngIf="previsao">
+  <br />
+  <span class="span_titulo"> {{ previsao?.current?.temp }}°C </span><br />
+  <span class="span_text">
+    ({{ previsao.current.weather[0].description }}) </span
+  ><br />
+</div>
+
+<!--Previsao 5 dias-->
+<section class="section" *ngIf="previsao">
+  <div *ngIf="previsao">
+    <table class="rTable">
+      <td class="tdPar">
+        <b>{{ previsao.daily[1].dt * 1000 | date: "dd/MM/yyyy" }}</b> - ({{
+          getDiaSemana(1)
+        }})
+        <p>
+          <b>Mín:</b> {{ previsao.daily[1].temp.min }}°C | <b>Máx:</b>
+          {{ previsao.daily[1].temp.max }}°C
+        </p>
+        <img
+          src="http://openweathermap.org/img/w/{{previsao.daily[1].weather[0].icon}}.png"
+          width="100"
+          height="100"
+        />
+        <p>
+          <b>{{previsao.daily[1].weather[0].description}}</b>
+        </p>
+      </td>
+
+      <td class="tdImpar">
+        <b>{{ previsao.daily[2].dt * 1000 | date: "dd/MM/yyyy" }}</b> - ({{
+          getDiaSemana(2)
+        }})
+        <p>
+          <b>Mín:</b> {{ previsao.daily[2].temp.min }}°C | <b>Máx:</b>
+          {{ previsao.daily[2].temp.max }}°C
+        </p>
+        <img
+          src="http://openweathermap.org/img/w/{{
+            previsao.daily[2].weather[0].icon
+          }}.png"
+          width="100"
+          height="100"
+        />
+        <p>
+          <b>{{previsao.daily[2].weather[0].description}}</b>
+        </p>
+      </td>
+
+      <td class="tdPar">
+        <b>{{ previsao.daily[3].dt * 1000 | date: "dd/MM/yyyy" }}</b> - ({{
+          getDiaSemana(3)
+        }})
+        <p>
+          <b>Mín:</b> {{ previsao.daily[3].temp.min }}°C | <b>Máx:</b>
+          {{ previsao.daily[3].temp.max }}°C
+        </p>
+        <img
+          src="http://openweathermap.org/img/w/{{
+            previsao.daily[3].weather[0].icon
+          }}.png"
+          width="100"
+          height="100"
+        />
+        <p>
+          <b>{{previsao.daily[3].weather[0].description}}</b>
+        </p>
+      </td>
+
+      <td class="tdImpar">
+        <b>{{ previsao.daily[4].dt * 1000 | date: "dd/MM/yyyy" }}</b> - ({{
+          getDiaSemana(4)
+        }})
+        <p>
+          <b>Mín:</b> {{ previsao.daily[4].temp.min }}°C | <b>Máx:</b>
+          {{ previsao.daily[4].temp.max }}°C
+        </p>
+        <img
+          src="http://openweathermap.org/img/w/{{
+            previsao.daily[4].weather[0].icon
+          }}.png"
+          width="100"
+          height="100"
+        />
+        <p>
+          <b>{{previsao.daily[4].weather[0].description}}</b>
+        </p>
+      </td>
+
+      <td class="tdPar">
+        <b> {{ previsao.daily[5].dt * 1000 | date: "dd/MM/yyyy" }}</b> - ({{
+          getDiaSemana(5)
+        }})
+        <p>
+          <b>Mín:</b> {{ previsao.daily[5].temp.min }}°C | <b>Máx:</b>
+          {{ previsao.daily[5].temp.max }}°C
+        </p>
+        <img
+          src="http://openweathermap.org/img/w/{{
+            previsao.daily[5].weather[0].icon
+          }}.png"
+          width="100"
+          height="100"
+        />
+        <p>
+          <b>{{previsao.daily[5].weather[0].description}}</b>
+        </p>
+      </td>
+    </table>
+  </div>
+</section>

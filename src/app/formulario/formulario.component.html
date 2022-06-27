@@ -1,0 +1,6 @@
+<p class="span_text"> API openweathermap</p>
+<form  class="span_text" (ngSubmit)="consultarPrevisoes(formNome.value)">
+  <label>Cidade: </label>
+  <input id="cidade" name="cidade" type="text" ngModel #formNome="ngModel"/>
+  <button type="submit"> Consultar  </button>
+</form>
